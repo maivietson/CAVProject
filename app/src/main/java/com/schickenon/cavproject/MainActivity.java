@@ -16,6 +16,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
+
     BannerMoviesPagerAdapter bannerMoviesPagerAdapter;
     TabLayout tabLayout;
     ViewPager bannerMoviesViewPager;

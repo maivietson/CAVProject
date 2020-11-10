@@ -25,18 +25,19 @@ public class SplashActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         currentUser = firebaseAuth.getCurrentUser();
 
-        splashScreenStart();
+        if(currentUser == null)
+        {
+            startActivity(new Intent(SplashActivity.this, SignInActivity.class));
+        } else {
+            splashScreenStart();
+        }
     }
 
     public void splashScreenStart() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(currentUser.getEmail().isEmpty()) {
-                    startActivity(new Intent(SplashActivity.this, SignInActivity.class));
-                } else {
-                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                }
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
             }
         }, duration);
