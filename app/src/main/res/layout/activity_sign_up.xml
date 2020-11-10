@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/back"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/login"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="80dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shapemail"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/roboto_light"
+        android:hint="Email"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shapemail"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/roboto_light"
+        android:hint="Password"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvHasAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="0dp"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:padding="4dp"
+            android:text="Have you account? Sign In Now"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shapelogin"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="15dp"
+        android:shadowColor="@android:color/transparent"
+        android:text="Register" />
+
+</LinearLayout>

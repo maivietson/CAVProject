@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "551262315145",
+    "firebase_url": "https://cavapp-60407.firebaseio.com",
+    "project_id": "cavapp-60407",
+    "storage_bucket": "cavapp-60407.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551262315145:android:64aef5662ce0bb841a1c58",
+        "android_client_info": {
+          "package_name": "com.schickenon.cavproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551262315145-c72g4jpt6qv08kjc8h64cq2fvtt0lmj4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.schickenon.cavproject",
+            "certificate_hash": "436aff73a7e75ae4741e0c54b9e5ef1e48078e68"
+          }
+        },
+        {
+          "client_id": "551262315145-7st1mjen0j43jq4i3gvv8u8in5lbrntl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZy6DECu1Qn3uZ94hwMhK58tChsaqLuJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551262315145-7st1mjen0j43jq4i3gvv8u8in5lbrntl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
