@@ -1,10 +1,12 @@
 package com.schickenon.cavproject.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.schickenon.cavproject.R;
@@ -16,7 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 public class BannerMoviesPagerAdapter extends PagerAdapter {
-
+    
     Context context;
     List<BannerMovies> bannerMoviesList;
 
@@ -44,7 +46,6 @@ public class BannerMoviesPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View view = LayoutInflater.from(context).inflate(R.layout.banner_movie_layout, null);
-
         ImageView bannerImage = view.findViewById(R.id.banner_image);
 
         //here use glide library

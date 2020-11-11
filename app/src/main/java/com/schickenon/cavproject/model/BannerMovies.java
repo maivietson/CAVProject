@@ -1,24 +1,30 @@
 package com.schickenon.cavproject.model;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class BannerMovies {
 
-    private Integer id;
+    private String id;
     private String movieName;
     private String imageUrl;
     private String fileUrl;
 
-    public BannerMovies(Integer id, String movieName, String imageUrl, String fileUrl) {
+    public BannerMovies() {
+    }
+
+    public BannerMovies(String id, String movieName, String imageUrl, String fileUrl) {
         this.id = id;
         this.movieName = movieName;
         this.imageUrl = imageUrl;
         this.fileUrl = fileUrl;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
