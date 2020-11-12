@@ -28,10 +28,7 @@ public class MainActivity extends AppCompatActivity {
     BannerMoviesPagerAdapter bannerMoviesPagerAdapter;
     TabLayout indicatorTab, categoryTab;
     ViewPager bannerMoviesViewPager;
-    List<BannerMovies> homeBannerList = new ArrayList<>();
-    List<BannerMovies> tvShowBannerList = new ArrayList<>();
-    List<BannerMovies> moviesBannerList = new ArrayList<>();
-    List<BannerMovies> kidsBannerList = new ArrayList<>();
+
     List<BannerMovies> bannerList = new ArrayList<>();
 
     private FirebaseDatabase firebaseDatabase;
