@@ -19,6 +19,7 @@ import com.schickenon.cavproject.adapter.BannerMoviesPagerAdapter;
 import com.schickenon.cavproject.adapter.MainRecyclerAdapter;
 import com.schickenon.cavproject.model.AllCategory;
 import com.schickenon.cavproject.model.BannerMovies;
+import com.schickenon.cavproject.model.CategoryItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -99,10 +100,19 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 allCategoryList.clear();
                 for(DataSnapshot childDataSnapshot : snapshot.getChildren()) {
+
                     AllCategory allCategory = childDataSnapshot.getValue(AllCategory.class);
+
+                    List<CategoryItem> categoryItemList = new ArrayList<>();
+
+                    for(DataSnapshot childCategory : childDataSnapshot.child("listMovies").getChildren()) {
+                        CategoryItem item = childCategory.getValue(CategoryItem.class);
+                        categoryItemList.add(item);
+                    }
+
+                    allCategory.setCategoryItemList(categoryItemList);
                     allCategoryList.add(allCategory);
                 }
-
                 setMainRecycler(allCategoryList);
             }
 
@@ -162,12 +172,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setMainRecycler(List<AllCategory> allCategoryList) {
-
         mainRecycler = findViewById(R.id.main_recycler);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         mainRecycler.setLayoutManager(layoutManager);
         mainRecyclerAdapter = new MainRecyclerAdapter(this, allCategoryList);
         mainRecycler.setAdapter(mainRecyclerAdapter);
-
     }
 }

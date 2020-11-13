@@ -15,48 +15,28 @@ public class AllCategory {
 
     private Integer categoryId;
     private String categoryTitle;
-    private String categoryRef;
     private List<CategoryItem> categoryItemList = null;
-
-    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
     public AllCategory() {
     }
 
-    public AllCategory(Integer categoryId, String categoryTitle, String categoryRef) {
+    public AllCategory(Integer categoryId, String categoryTitle) {
         this.categoryId = categoryId;
         this.categoryTitle = categoryTitle;
-        this.categoryRef = categoryRef;
-
-        firebaseDatabase.getReference(categoryRef).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                categoryItemList.clear();
-                int child = snapshot.getChildrenCount() < 10 ? (int) snapshot.getChildrenCount() : 10;
-                for(DataSnapshot)
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
-    public String getCategoryRef() {
-        return categoryRef;
-    }
-
-    public void setCategoryRef(String categoryRef) {
-        this.categoryRef = categoryRef;
-    }
-
-    public List<CategoryItem> getCategoryItemList() {
-        return categoryItemList;
-    }
-
-    public void setCategoryItemList(List<CategoryItem> categoryItemList) {
+    public AllCategory(Integer categoryId, String categoryTitle, List<CategoryItem> categoryItemList) {
+        this.categoryId = categoryId;
+        this.categoryTitle = categoryTitle;
         this.categoryItemList = categoryItemList;
+    }
+
+    public Integer getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getCategoryTitle() {
@@ -67,11 +47,11 @@ public class AllCategory {
         this.categoryTitle = categoryTitle;
     }
 
-    public Integer getCategoryId() {
-        return categoryId;
+    public List<CategoryItem> getCategoryItemList() {
+        return categoryItemList;
     }
 
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
+    public void setCategoryItemList(List<CategoryItem> categoryItemList) {
+        this.categoryItemList = categoryItemList;
     }
 }
