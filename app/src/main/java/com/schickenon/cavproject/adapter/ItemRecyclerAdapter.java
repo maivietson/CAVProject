@@ -1,12 +1,15 @@
 package com.schickenon.cavproject.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.schickenon.cavproject.MovieDetails;
 import com.schickenon.cavproject.R;
 import com.schickenon.cavproject.model.CategoryItem;
 
@@ -34,6 +37,21 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
         Glide.with(context).load(categoryItemList.get(position).getImageUrl()).into(holder.itemImage);
+
+        holder.itemImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Toast.makeText(context, "" + categoryItemList.get(position).getMovieName(), Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(context, MovieDetails.class);
+                i.putExtra("MovieId", categoryItemList.get(position).getId());
+                i.putExtra("movieName", categoryItemList.get(position).getMovieName());
+                i.putExtra("imageUrl", categoryItemList.get(position).getImageUrl());
+                i.putExtra("fileUrl", categoryItemList.get(position).getFileUrl());
+                i.putExtra("description", categoryItemList.get(position).getDescription());
+
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override

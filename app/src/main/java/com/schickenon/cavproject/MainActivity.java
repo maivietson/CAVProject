@@ -2,13 +2,16 @@ package com.schickenon.cavproject;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
     TabLayout indicatorTab, categoryTab;
     ViewPager bannerMoviesViewPager;
 
+    NestedScrollView nestedScrollView;
+    AppBarLayout appBarLayout;
+
     List<BannerMovies> bannerList = new ArrayList<>();
     List<AllCategory> allCategoryList = new ArrayList<>();
 
@@ -50,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
 
         indicatorTab = findViewById(R.id.tab_indicator);
         categoryTab = findViewById(R.id.tabLayout);
+        nestedScrollView = findViewById(R.id.nested_scroll);
+        appBarLayout = findViewById(R.id.appbar);
 
         // init database reference
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -60,15 +68,19 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()) {
                     case 1:
+                        setScrollDefaultState();
                         getDataBannerMovies("videos/newMovies/tvShowBanner");
                         return;
                     case 2:
+                        setScrollDefaultState();
                         getDataBannerMovies("videos/newMovies/moviesBanner");
                         return;
                     case 3:
+                        setScrollDefaultState();
                         getDataBannerMovies("videos/newMovies/kidsBanner");
                         return;
                     default:
+                        setScrollDefaultState();
                         getDataBannerMovies("videos/newMovies/homeBanner");
                 }
             }
@@ -177,5 +189,12 @@ public class MainActivity extends AppCompatActivity {
         mainRecycler.setLayoutManager(layoutManager);
         mainRecyclerAdapter = new MainRecyclerAdapter(this, allCategoryList);
         mainRecycler.setAdapter(mainRecyclerAdapter);
+    }
+
+    private void setScrollDefaultState() {
+
+        nestedScrollView.fullScroll(View.FOCUS_UP);
+        nestedScrollView.scrollTo(0,0);
+        appBarLayout.setExpanded(true);
     }
 }

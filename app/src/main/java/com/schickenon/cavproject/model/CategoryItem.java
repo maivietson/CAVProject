@@ -6,15 +6,25 @@ public class CategoryItem {
     private String movieName;
     private String imageUrl;
     private String fileUrl;
+    private String description;
 
     public CategoryItem() {
     }
 
-    public CategoryItem(Integer id, String movieName, String imageUrl, String fileUrl) {
+    public CategoryItem(Integer id, String movieName, String imageUrl, String fileUrl, String description) {
         this.id = id;
         this.movieName = movieName;
         this.imageUrl = imageUrl;
         this.fileUrl = fileUrl;
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Integer getId() {

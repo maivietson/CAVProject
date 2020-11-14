@@ -1,6 +1,7 @@
 package com.schickenon.cavproject.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.schickenon.cavproject.MovieDetails;
 import com.schickenon.cavproject.R;
 import com.schickenon.cavproject.model.BannerMovies;
 
@@ -51,6 +53,21 @@ public class BannerMoviesPagerAdapter extends PagerAdapter {
         //here use glide library
         Glide.with(context).load(bannerMoviesList.get(position).getImageUrl()).into(bannerImage);
         container.addView(view);
+
+        bannerImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Toast.makeText(context, "" + bannerMoviesList.get(position).getMovieName(), Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(context, MovieDetails.class);
+                i.putExtra("MovieId", bannerMoviesList.get(position).getId());
+                i.putExtra("movieName", bannerMoviesList.get(position).getMovieName());
+                i.putExtra("imageUrl", bannerMoviesList.get(position).getImageUrl());
+                i.putExtra("fileUrl", bannerMoviesList.get(position).getFileUrl());
+                i.putExtra("description", bannerMoviesList.get(position).getDescription());
+
+                context.startActivity(i);
+            }
+        });
 
         return view;
     }
