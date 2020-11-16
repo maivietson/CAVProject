@@ -1,0 +1,75 @@
+package com.schickenon.cavproject.adapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.schickenon.cavproject.R;
+import com.schickenon.cavproject.model.VideoItem;
+
+import java.util.List;
+import java.util.Random;
+
+public class MainListCategoryAdapter extends RecyclerView.Adapter<MainListCategoryAdapter.MainViewHolder> {
+
+    Context context;
+    List<VideoItem> allVideoItemList;
+
+    public MainListCategoryAdapter(Context context, List<VideoItem> allVideoItemList) {
+        this.context = context;
+        this.allVideoItemList = allVideoItemList;
+    }
+
+    @NonNull
+    @Override
+    public MainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new MainViewHolder(LayoutInflater.from(context).inflate(R.layout.main_recycler_list_video_item, parent, false));
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull MainViewHolder holder, int position) {
+        holder.name_movie.setText(allVideoItemList.get(position).getMovieName());
+        String infoMovies = Integer.toString(allVideoItemList.get(position).getView()) + " views - " + allVideoItemList.get(position).getDate();
+        holder.info_movie.setText(infoMovies);
+        holder.description_movie.setText(allVideoItemList.get(position).getDescription());
+        Glide.with(context).load(allVideoItemList.get(position).getImageUrl()).into(holder.imageViewVideo);
+
+        String random = "avatar" + Integer.toString(new Random().nextInt(14) + 1);
+        int id = context.getResources().getIdentifier(random, "mipmap", context.getPackageName());
+        holder.imageViewAvatar.setImageResource(id);
+    }
+
+    @Override
+    public int getItemCount() {
+        return allVideoItemList.size();
+    }
+
+    public static final class MainViewHolder extends RecyclerView.ViewHolder {
+
+        ImageView imageViewVideo;
+        ImageView imageViewAvatar;
+        TextView name_movie;
+        TextView info_movie;
+        TextView description_movie;
+
+        public MainViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            imageViewVideo = itemView.findViewById(R.id.image_movie_item);
+            imageViewAvatar = itemView.findViewById(R.id.image_avatar);
+            name_movie = itemView.findViewById(R.id.name_video_item);
+            info_movie = itemView.findViewById(R.id.info_movie);
+            description_movie = itemView.findViewById(R.id.description_movie);
+        }
+    }
+
+}

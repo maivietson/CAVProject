@@ -10,6 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.GridView;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
@@ -19,10 +20,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.schickenon.cavproject.adapter.BannerMoviesPagerAdapter;
+import com.schickenon.cavproject.adapter.MainListCategoryAdapter;
 import com.schickenon.cavproject.adapter.MainRecyclerAdapter;
 import com.schickenon.cavproject.model.AllCategory;
 import com.schickenon.cavproject.model.BannerMovies;
 import com.schickenon.cavproject.model.CategoryItem;
+import com.schickenon.cavproject.model.VideoItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,9 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
     List<BannerMovies> bannerList = new ArrayList<>();
     List<AllCategory> allCategoryList = new ArrayList<>();
+    List<VideoItem> allVideoItemList = new ArrayList<>();
 
     MainRecyclerAdapter mainRecyclerAdapter;
+    MainListCategoryAdapter mainListCategoryAdapter;
     RecyclerView mainRecycler;
+    RecyclerView mainRecyclerListVideo;
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReferenceNewMovies;
@@ -70,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         setScrollDefaultState();
                         getDataBannerMovies("videos/newMovies/tvShowBanner");
+                        getListVideoForCategory("videos/lists/tvShow");
                         return;
                     case 2:
                         setScrollDefaultState();
@@ -82,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         setScrollDefaultState();
                         getDataBannerMovies("videos/newMovies/homeBanner");
+                        getCategoryHome("videos/categoryHome");
                 }
             }
 
@@ -104,6 +112,26 @@ public class MainActivity extends AppCompatActivity {
 //        // pass array to recycle setup method
 //        setMainRecycler(allCategoryList);
         getCategoryHome("videos/categoryHome");
+    }
+
+    private void getListVideoForCategory(String path) {
+        firebaseDatabase.getReference(path).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                allVideoItemList.clear();
+                for(DataSnapshot childDataSnapshot : snapshot.getChildren()) {
+                    VideoItem item = childDataSnapshot.getValue(VideoItem.class);
+                    allVideoItemList.add(item);
+                }
+
+                setListVideoForCategory(allVideoItemList);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void getCategoryHome(String path) {
@@ -189,6 +217,14 @@ public class MainActivity extends AppCompatActivity {
         mainRecycler.setLayoutManager(layoutManager);
         mainRecyclerAdapter = new MainRecyclerAdapter(this, allCategoryList);
         mainRecycler.setAdapter(mainRecyclerAdapter);
+    }
+
+    public void setListVideoForCategory(List<VideoItem> listVideoForCategory) {
+        mainRecycler = findViewById(R.id.main_recycler);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+        mainRecycler.setLayoutManager(layoutManager);
+        mainListCategoryAdapter = new MainListCategoryAdapter(this, listVideoForCategory);
+        mainRecycler.setAdapter(mainListCategoryAdapter);
     }
 
     private void setScrollDefaultState() {
