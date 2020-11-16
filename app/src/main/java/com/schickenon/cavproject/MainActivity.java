@@ -104,13 +104,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        allCategoryList = new ArrayList<>();
-//        allCategoryList.add(new AllCategory(1, "Bollywood"));
-//        allCategoryList.add(new AllCategory(1, "Hollywood"));
-//        allCategoryList.add(new AllCategory(1, "Kids"));
-//
-//        // pass array to recycle setup method
-//        setMainRecycler(allCategoryList);
         getCategoryHome("videos/categoryHome");
     }
 
@@ -220,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setListVideoForCategory(List<VideoItem> listVideoForCategory) {
+        Log.d("SON", "" + Integer.toString(listVideoForCategory.size()));
         mainRecycler = findViewById(R.id.main_recycler);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         mainRecycler.setLayoutManager(layoutManager);
