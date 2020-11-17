@@ -27,7 +27,7 @@
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="10dp"
         android:fontFamily="@font/roboto_light"
-        android:hint="Email"
+        android:hint="@string/emailHint"
         android:padding="15dp"
         android:textColor="@color/white"
         android:textColorHighlight="@color/white"
@@ -44,7 +44,7 @@
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="10dp"
         android:fontFamily="@font/roboto_light"
-        android:hint="Password"
+        android:hint="@string/passwordHint"
         android:padding="15dp"
         android:textColor="@color/white"
         android:textColorHighlight="@color/white"
@@ -100,7 +100,7 @@
         android:fontFamily="@font/roboto_medium"
         android:padding="15dp"
         android:shadowColor="@android:color/transparent"
-        android:text="Log In" />
+        android:text="@string/btnSignIn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignUp"
@@ -114,7 +114,7 @@
         android:fontFamily="@font/roboto_medium"
         android:padding="15dp"
         android:shadowColor="@android:color/transparent"
-        android:text="Sign Up"
+        android:text="@string/btnSignUp"
         android:textColor="@color/white" />
 
 </LinearLayout>

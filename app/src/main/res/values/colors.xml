@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="signupColor">#066e8a</color>
     <color name="indeterminateTint">#F44336</color>
+    <color name="background">#0F171E</color>
 </resources>

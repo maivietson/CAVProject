@@ -1,6 +1,7 @@
 package com.schickenon.cavproject.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.schickenon.cavproject.MovieDetails;
 import com.schickenon.cavproject.R;
 import com.schickenon.cavproject.model.VideoItem;
 
@@ -44,6 +46,20 @@ public class ItemOfCategoryAdapter extends RecyclerView.Adapter<ItemOfCategoryAd
         String random = "avatar" + Integer.toString(new Random().nextInt(14) + 1);
         int id = context.getResources().getIdentifier(random, "mipmap", context.getPackageName());
         holder.imageViewAvatar.setImageResource(id);
+
+        holder.imageViewVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, MovieDetails.class);
+                i.putExtra("MovieId", allVideoItemList.get(position).getId());
+                i.putExtra("movieName", allVideoItemList.get(position).getMovieName());
+                i.putExtra("imageUrl", allVideoItemList.get(position).getImageUrl());
+                i.putExtra("fileUrl", allVideoItemList.get(position).getFileUrl());
+                i.putExtra("description", allVideoItemList.get(position).getDescription());
+
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override
