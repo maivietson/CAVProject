@@ -2,6 +2,7 @@ package com.schickenon.cavproject.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +57,7 @@ public class ItemOfCategoryAdapter extends RecyclerView.Adapter<ItemOfCategoryAd
                 i.putExtra("imageUrl", allVideoItemList.get(position).getImageUrl());
                 i.putExtra("fileUrl", allVideoItemList.get(position).getFileUrl());
                 i.putExtra("description", allVideoItemList.get(position).getDescription());
+                i.putExtra("hasAds", allVideoItemList.get(position).getHasAds());
 
                 context.startActivity(i);
             }

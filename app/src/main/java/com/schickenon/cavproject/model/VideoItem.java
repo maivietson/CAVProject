@@ -9,11 +9,12 @@ public class VideoItem {
     private String description;
     private String date;
     private Integer view;
+    private String hasAds;
 
     public VideoItem() {
     }
 
-    public VideoItem(Integer id, String movieName, String imageUrl, String fileUrl, String description, String date, Integer view) {
+    public VideoItem(Integer id, String movieName, String imageUrl, String fileUrl, String description, String date, Integer view, String hasAds) {
         this.id = id;
         this.movieName = movieName;
         this.imageUrl = imageUrl;
@@ -21,6 +22,15 @@ public class VideoItem {
         this.description = description;
         this.date = date;
         this.view = view;
+        this.hasAds = hasAds;
+    }
+
+    public String getHasAds() {
+        return hasAds;
+    }
+
+    public void setHasAds(String hasAds) {
+        this.hasAds = hasAds;
     }
 
     public Integer getId() {
