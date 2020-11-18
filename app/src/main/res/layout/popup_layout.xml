@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
@@ -18,19 +18,59 @@
             android:padding="10dp"
             android:orientation="vertical">
 
-            <ImageView
+            <TextView
+                android:id="@+id/titlePopup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#2196F3"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/titlePopup"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/contentText"
-                android:layout_width="wrap_content"
+                android:id="@+id/contentText1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto_medium"
                 android:padding="10dp"
-                android:text=""
-                android:textSize="18sp" />
+                android:text="@string/contentPopup1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/contentText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="10dp"
+                android:text="@string/contentPopup2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/contentText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="10dp"
+                android:text="@string/contentPopup3"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/contentText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="10dp"
+                android:text="@string/contentPopup4"
+                android:textSize="16sp" />
 
         </LinearLayout>
 

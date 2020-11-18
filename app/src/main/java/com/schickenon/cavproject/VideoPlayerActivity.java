@@ -46,25 +46,29 @@ public class VideoPlayerActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.admobView);
 
         hasAds = getIntent().getStringExtra("hasAds");
-        isShowAds = Integer.parseInt(hasAds);
-        if( isShowAds == 1) {
-            MobileAds.initialize(this, new OnInitializationCompleteListener() {
-                @Override
-                public void onInitializationComplete(InitializationStatus initializationStatus) {
+        if(!hasAds.isEmpty()) {
+            isShowAds = Integer.parseInt(hasAds);
+            if( isShowAds == 1) {
+                MobileAds.initialize(this, new OnInitializationCompleteListener() {
+                    @Override
+                    public void onInitializationComplete(InitializationStatus initializationStatus) {
 
-                }
-            });
+                    }
+                });
 
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mAdView.loadAd(adRequest);
+                AdRequest adRequest = new AdRequest.Builder().build();
+                mAdView.loadAd(adRequest);
 
-            mAdView.setAdListener(new AdListener() {
-                @Override
-                public void onAdClosed() {
-                    mAdView.setVisibility(View.GONE);
-                }
-            });
+                mAdView.setAdListener(new AdListener() {
+                    @Override
+                    public void onAdClosed() {
+                        mAdView.setVisibility(View.GONE);
+                    }
+                });
 
+            } else {
+                mAdView.setVisibility(View.GONE);
+            }
         } else {
             mAdView.setVisibility(View.GONE);
         }

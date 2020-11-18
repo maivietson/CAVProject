@@ -27,9 +27,6 @@ public class PopupCustom {
 
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-        TextView contentText = popupView.findViewById(R.id.contentText);
-        contentText.setText("jnf dnfisdf siafnsdif asdifuasd fasidfnasdnf  sdfijasdf sdifhusid fsidfn9isd fsdfsd fisdfnsui");
-
         popupView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
