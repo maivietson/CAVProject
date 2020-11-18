@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.GridView;
 
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +27,7 @@ import com.schickenon.cavproject.model.AllCategory;
 import com.schickenon.cavproject.model.BannerMovies;
 import com.schickenon.cavproject.model.CategoryItem;
 import com.schickenon.cavproject.model.VideoItem;
+import com.schickenon.cavproject.popup.PopupCustom;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView mainRecycler;
     RecyclerView mainRecyclerListVideo;
 
+    FloatingActionButton fabNotify;
+
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReferenceNewMovies;
 
@@ -64,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         categoryTab = findViewById(R.id.tabLayout);
         nestedScrollView = findViewById(R.id.nested_scroll);
         appBarLayout = findViewById(R.id.appbar);
+        fabNotify = findViewById(R.id.fabNotify);
 
         // init database reference
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -105,6 +110,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         getCategoryHome("videos/categoryHome");
+
+        fabNotify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupCustom popupCustom = new PopupCustom();
+                popupCustom.showPopupWindow(view);
+            }
+        });
     }
 
     private void getListVideoForCategory(String path) {

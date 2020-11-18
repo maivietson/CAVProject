@@ -134,4 +134,15 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:backgroundTint="#E91E63"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_baseline_notifications_24" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
