@@ -46,7 +46,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.admobView);
 
         hasAds = getIntent().getStringExtra("hasAds");
-        if(!hasAds.isEmpty()) {
+        if(hasAds != null) {
             isShowAds = Integer.parseInt(hasAds);
             if( isShowAds == 1) {
                 MobileAds.initialize(this, new OnInitializationCompleteListener() {
