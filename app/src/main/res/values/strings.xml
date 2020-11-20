@@ -13,10 +13,26 @@
     <!-- Storage id of admob -->
     <string name="appID">ca-app-pub-9093256036521176~2804431627</string>
     <string name="admobID">ca-app-pub-3940256099942544/6300978111</string>
+<!--    <string name="appID">ca-app-pub-1097952400927041~8743169924</string>-->
+<!--    <string name="admobID">ca-app-pub-1097952400927041/7422349399</string>-->
     <!-- Category video -->
     <string name="titlePopup">Về Chúng Tôi!!</string>
     <string name="contentPopup1">Cảm ơn bạn đã sử dụng app phim của chúng tôi</string>
     <string name="contentPopup2">Phiên bản 1.0.0</string>
     <string name="contentPopup3">Trong app có chứa quảng cáo sẽ làm phiền bạn và mong bạn thông cảm chúng tôi bật quảng cáo để có kinh phí duy trì app</string>
     <string name="contentPopup4">Donate</string>
+    <!-- Tab category-->
+    <string name="home">Home</string>
+    <string name="tvShow">TV Show</string>
+    <string name="movies">Movie</string>
+    <string name="kids">Kids</string>
+    <string name="cartoon">Cartoons</string>
+    <string name="chineseCam">China Cam</string>
+    <string name="chinesePorn">China Porn</string>
+    <string name="chineseAmateur">China Amateur</string>
+    <string name="chineseModel">China Model</string>
+    <string name="chinese">China</string>
+    <string name="asian">Asian</string>
+    <string name="euro">Euro Porn</string>
+    <string name="jav">JAV</string>
 </resources>

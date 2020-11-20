@@ -30,10 +30,9 @@ public class MovieDetails extends AppCompatActivity {
     String mName, mImage, mId, mFileUrl, mDescription, hasAds;
 
     private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/1033173712";
+//    private static final String AD_UNIT_ID = "ca-app-pub-1097952400927041/5091521916";
 
     private InterstitialAd interstitialAd;
-
-//    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,15 +58,10 @@ public class MovieDetails extends AppCompatActivity {
 
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
-                String error = String.format("domain: %s, code: %d, message: %s", loadAdError.getDomain(), loadAdError.getCode(), loadAdError.getMessage());
-                Toast.makeText(MovieDetails.this, "onAdFailedToLoad() with error: " + error, Toast.LENGTH_SHORT).show();
+//                String error = String.format("domain: %s, code: %d, message: %s", loadAdError.getDomain(), loadAdError.getCode(), loadAdError.getMessage());
+//                Toast.makeText(MovieDetails.this, "onAdFailedToLoad() with error: " + error, Toast.LENGTH_SHORT).show();
+                PlayVideo();
             }
-
-            @Override
-            public void onAdLoaded() {
-                Toast.makeText(MovieDetails.this, "onAdLoaded()", Toast.LENGTH_SHORT).show();
-            }
-
         });
 
         movieImage = findViewById(R.id.movie_image);
@@ -81,8 +75,6 @@ public class MovieDetails extends AppCompatActivity {
         mFileUrl = getIntent().getStringExtra("fileUrl");
         mDescription = getIntent().getStringExtra("description");
         hasAds = getIntent().getStringExtra("hasAds");
-
-        Log.d("SON", "" + hasAds);
 
         // set data to layout
         Glide.with(MovieDetails.this).load(mImage).into(movieImage);

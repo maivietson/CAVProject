@@ -75,8 +75,6 @@ public class VideoPlayerActivity extends AppCompatActivity {
 
         videoPlayer = findViewById(R.id.exo_player);
         setupExoPlayer(getIntent().getStringExtra("url"));
-
-
     }
 
     private void setupExoPlayer(String url) {

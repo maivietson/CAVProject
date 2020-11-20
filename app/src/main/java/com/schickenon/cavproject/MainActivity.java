@@ -74,22 +74,43 @@ public class MainActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
 
         getDataBannerMovies("videos/newMovies/homeBanner");
+        getCategoryHome("videos/categoryHome");
+
         categoryTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()) {
                     case 1:
                         setScrollDefaultState();
-                        getDataBannerMovies("videos/newMovies/tvShowBanner");
-                        getListVideoForCategory("videos/lists/tvShow");
+                        getListVideoForCategory("videos/lists/chineseCam");
                         return;
                     case 2:
                         setScrollDefaultState();
-                        getDataBannerMovies("videos/newMovies/moviesBanner");
+                        getListVideoForCategory("videos/lists/chinesePorn");
                         return;
                     case 3:
                         setScrollDefaultState();
-                        getDataBannerMovies("videos/newMovies/kidsBanner");
+                        getListVideoForCategory("videos/lists/chineseAmateur");
+                        return;
+                    case 4:
+                        setScrollDefaultState();
+                        getListVideoForCategory("videos/lists/chineseModel");
+                        return;
+                    case 5:
+                        setScrollDefaultState();
+                        getListVideoForCategory("videos/lists/chinese");
+                        return;
+                    case 6:
+                        setScrollDefaultState();
+                        getListVideoForCategory("videos/lists/asian");
+                        return;
+                    case 7:
+                        setScrollDefaultState();
+                        getListVideoForCategory("videos/lists/euro");
+                        return;
+                    case 8:
+                        setScrollDefaultState();
+                        getListVideoForCategory("videos/lists/jav");
                         return;
                     default:
                         setScrollDefaultState();
@@ -108,8 +129,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        getCategoryHome("videos/categoryHome");
 
         fabNotify.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -235,7 +254,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setScrollDefaultState() {
-
         nestedScrollView.fullScroll(View.FOCUS_UP);
         nestedScrollView.scrollTo(0,0);
         appBarLayout.setExpanded(true);
