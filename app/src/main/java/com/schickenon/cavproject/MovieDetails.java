@@ -24,13 +24,13 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 public class MovieDetails extends AppCompatActivity {
 
     ImageView movieImage;
-    TextView movieName;
+    TextView movieName, movieDescription;
     AppCompatButton playButton;
 
     String mName, mImage, mId, mFileUrl, mDescription, hasAds;
 
-    private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/1033173712";
-//    private static final String AD_UNIT_ID = "ca-app-pub-1097952400927041/5091521916";
+//    private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/1033173712";
+    private static final String AD_UNIT_ID = "ca-app-pub-1097952400927041/5091521916";
 
     private InterstitialAd interstitialAd;
 
@@ -58,15 +58,16 @@ public class MovieDetails extends AppCompatActivity {
 
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
-//                String error = String.format("domain: %s, code: %d, message: %s", loadAdError.getDomain(), loadAdError.getCode(), loadAdError.getMessage());
-//                Toast.makeText(MovieDetails.this, "onAdFailedToLoad() with error: " + error, Toast.LENGTH_SHORT).show();
-                PlayVideo();
+                String error = String.format("domain: %s, code: %d, message: %s", loadAdError.getDomain(), loadAdError.getCode(), loadAdError.getMessage());
+                Toast.makeText(MovieDetails.this, "onAdFailedToLoad() with error: " + error, Toast.LENGTH_SHORT).show();
+                onReLoadAds();
             }
         });
 
         movieImage = findViewById(R.id.movie_image);
         movieName = findViewById(R.id.movie_name);
         playButton = findViewById(R.id.play_button);
+        movieDescription = findViewById(R.id.movie_description);
 
         // set data pass from activity previous
         mName = getIntent().getStringExtra("movieName");
@@ -79,6 +80,7 @@ public class MovieDetails extends AppCompatActivity {
         // set data to layout
         Glide.with(MovieDetails.this).load(mImage).into(movieImage);
         movieName.setText(mName);
+        movieDescription.setText(mDescription);
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,22 +104,22 @@ public class MovieDetails extends AppCompatActivity {
     }
 
     private void startLoadAds() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        interstitialAd.loadAd(adRequest);
+    }
+
+    private void onReLoadAds() {
         if (!interstitialAd.isLoading() && !interstitialAd.isLoaded()) {
             AdRequest adRequest = new AdRequest.Builder().build();
             interstitialAd.loadAd(adRequest);
         }
     }
 
-    private void onReLoadAds() {
-        AdRequest adRequest = new AdRequest.Builder().build();
-        interstitialAd.loadAd(adRequest);
-    }
-
     private void showInterstitialAd() {
         if(interstitialAd != null && interstitialAd.isLoaded()) {
             interstitialAd.show();
         } else {
-            Toast.makeText(this, "Ad did not load", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Ad did not load", Toast.LENGTH_SHORT).show();
             onReLoadAds();
         }
     }

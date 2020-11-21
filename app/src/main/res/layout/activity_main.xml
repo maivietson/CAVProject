@@ -34,7 +34,7 @@
                     android:fontFamily="@font/roboto_bold"
                     android:gravity="center_vertical"
                     android:paddingLeft="60dp"
-                    android:text="Movie Streaming App"
+                    android:text="Collection Adult Video Enjoy"
                     android:textAlignment="textStart"
                     android:textColor="@color/white" />
             </LinearLayout>

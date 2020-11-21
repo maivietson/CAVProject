@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CAVProject</string>
+    <string name="app_name">CAVEnjoy</string>
     <string name="toolbar_tvshows">TV Show</string>
     <string name="toolbar_movies">Movies</string>
     <string name="home_my_list">My List</string>
@@ -11,10 +11,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Storage id of admob -->
-    <string name="appID">ca-app-pub-9093256036521176~2804431627</string>
-    <string name="admobID">ca-app-pub-3940256099942544/6300978111</string>
-<!--    <string name="appID">ca-app-pub-1097952400927041~8743169924</string>-->
-<!--    <string name="admobID">ca-app-pub-1097952400927041/7422349399</string>-->
+<!--    <string name="appID">ca-app-pub-9093256036521176~2804431627</string>-->
+<!--    <string name="admobID">ca-app-pub-3940256099942544/6300978111</string>-->
+    <string name="appID">ca-app-pub-1097952400927041~8743169924</string>
+    <string name="admobID">ca-app-pub-1097952400927041/7422349399</string>
     <!-- Category video -->
     <string name="titlePopup">Về Chúng Tôi!!</string>
     <string name="contentPopup1">Cảm ơn bạn đã sử dụng app phim của chúng tôi</string>
