@@ -11,8 +11,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Storage id of admob -->
-<!--    <string name="appID">ca-app-pub-9093256036521176~2804431627</string>-->
-<!--    <string name="admobID">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--    <string name="appID">ca-app-pub-9093256036521176~2804431627</string>-->
+    <!--    <string name="admobID">ca-app-pub-3940256099942544/6300978111</string>-->
     <string name="appID">ca-app-pub-1097952400927041~8743169924</string>
     <string name="admobID">ca-app-pub-1097952400927041/7422349399</string>
     <!-- Category video -->
@@ -35,4 +35,9 @@
     <string name="asian">Asian</string>
     <string name="euro">Euro Porn</string>
     <string name="jav">JAV</string>
+    <!-- Tab category for movie -->
+    <string name="phimle">Phim Lẻ</string>
+    <string name="phimbo">Phim Bộ</string>
+    <string name="phìmhoathinh">Phim Hoạt Hình</string>
+    <string name="code">Other</string>
 </resources>

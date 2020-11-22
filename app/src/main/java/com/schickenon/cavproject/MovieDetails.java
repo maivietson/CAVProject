@@ -40,29 +40,29 @@ public class MovieDetails extends AppCompatActivity {
         setContentView(R.layout.activity_movie_details);
 
         // Initialize the mobile Ads SDK
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-
-            }
-        });
+//        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(InitializationStatus initializationStatus) {
+//
+//            }
+//        });
         // Create the InterstitialAd and set the adUnitId
-        interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId(AD_UNIT_ID);
-
-        interstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                PlayVideo();
-            }
-
-            @Override
-            public void onAdFailedToLoad(LoadAdError loadAdError) {
-                String error = String.format("domain: %s, code: %d, message: %s", loadAdError.getDomain(), loadAdError.getCode(), loadAdError.getMessage());
-                Toast.makeText(MovieDetails.this, "onAdFailedToLoad() with error: " + error, Toast.LENGTH_SHORT).show();
-                onReLoadAds();
-            }
-        });
+//        interstitialAd = new InterstitialAd(this);
+//        interstitialAd.setAdUnitId(AD_UNIT_ID);
+//
+//        interstitialAd.setAdListener(new AdListener() {
+//            @Override
+//            public void onAdClosed() {
+//                PlayVideo();
+//            }
+//
+//            @Override
+//            public void onAdFailedToLoad(LoadAdError loadAdError) {
+//                String error = String.format("domain: %s, code: %d, message: %s", loadAdError.getDomain(), loadAdError.getCode(), loadAdError.getMessage());
+//                Toast.makeText(MovieDetails.this, "onAdFailedToLoad() with error: " + error, Toast.LENGTH_SHORT).show();
+//                onReLoadAds();
+//            }
+//        });
 
         movieImage = findViewById(R.id.movie_image);
         movieName = findViewById(R.id.movie_name);
@@ -85,21 +85,29 @@ public class MovieDetails extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showInterstitialAd();
+                //showInterstitialAd();
+                PlayVideo();
             }
         });
 
-        startLoadAds();
+//        startLoadAds();
     }
 
     private void PlayVideo() {
         // Load the next interstital
-        onReLoadAds();
+        // onReLoadAds();
 
         // open activity to play video
-        Intent i = new Intent(MovieDetails.this, VideoPlayerActivity.class);
-        i.putExtra("url", mFileUrl);
-        i.putExtra("hasAds", hasAds);
+        boolean isModeMovie = mDescription.contains("Movie Mode");
+        Intent i;
+        if(isModeMovie) {
+            i = new Intent(MovieDetails.this, WebViewActivity.class);
+            i.putExtra("url", mFileUrl);
+        } else {
+            i = new Intent(MovieDetails.this, VideoPlayerActivity.class);
+            i.putExtra("url", mFileUrl);
+            i.putExtra("hasAds", hasAds);
+        }
         startActivity(i);
     }
 
