@@ -70,8 +70,8 @@ public class VideoPlayerActivity extends AppCompatActivity {
 
                     @Override
                     public void onAdFailedToLoad(LoadAdError loadAdError) {
-                        String error = String.format("domain: %s, code: %d, message: %s", loadAdError.getDomain(), loadAdError.getCode(), loadAdError.getMessage());
-                        Toast.makeText(VideoPlayerActivity.this, "onAdFailedToLoad() with error: " + error, Toast.LENGTH_SHORT).show();
+                        //String error = String.format("domain: %s, code: %d, message: %s", loadAdError.getDomain(), loadAdError.getCode(), loadAdError.getMessage());
+                        //Toast.makeText(VideoPlayerActivity.this, "onAdFailedToLoad() with error: " + error, Toast.LENGTH_SHORT).show();
                         super.onAdFailedToLoad(loadAdError);
                     }
 
@@ -93,7 +93,6 @@ public class VideoPlayerActivity extends AppCompatActivity {
     }
 
     private void setupExoPlayer(String url) {
-//        Log.d("SON", ""+url);
         simpleExoPlayer = ExoPlayerFactory.newSimpleInstance(this);
         videoPlayer.setPlayer(simpleExoPlayer);
         DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(this, Util.getUserAgent(this, "movieapp"));

@@ -67,7 +67,7 @@ public class SignUpActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()) {
                                     //Toast.makeText(NetflixSignUp.this, "Successfully registered", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(SignUpActivity.this, MovieActivity.class);
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(SignUpActivity.this, "Registration Error", Toast.LENGTH_LONG).show();

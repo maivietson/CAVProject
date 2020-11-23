@@ -70,7 +70,7 @@ public class SignInActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()) {
-                                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(SignInActivity.this, MovieActivity.class);
                                     startActivity(intent);
                                 } else {
                                     progressDialog.setMessage("Account not exist!!");

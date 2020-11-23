@@ -53,7 +53,6 @@ public class MovieActivity extends AppCompatActivity {
     MainRecyclerAdapter mainRecyclerAdapter;
     MainListCategoryAdapter mainListCategoryAdapter;
     RecyclerView mainRecycler;
-    RecyclerView mainRecyclerListVideo;
 
     FloatingActionButton fabNotify;
 
