@@ -18,19 +18,30 @@
             android:padding="10dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/titlePopup"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#2196F3"
-                android:fontFamily="@font/roboto_bold"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="Code Unlock"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_Close"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/ic_baseline_close_24" />
+
+                <TextView
+                    android:id="@+id/titlePopup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#2196F3"
+                    android:fontFamily="@font/roboto_bold"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="Code Unlock"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </RelativeLayout>
 
             <EditText
                 android:id="@+id/edtCode"

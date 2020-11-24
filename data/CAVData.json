@@ -1,4 +1,451 @@
 {
+  "movie": {
+    "categoryHome": [
+      {
+        "categoryId": 1,
+        "categoryTitle": "Phim Lẻ",
+        "listMovies": [
+          {
+            "description": "Movie Mode",
+            "fileUrl": "https://streamtape.com/e/rb772eGB77tbjGG/",
+            "id": 1,
+            "imageUrl": "https://image.phimmoiz.com/film/1871/preview.medium.jpg",
+            "movieName": "HARRY POTTER VÀ TÊN TÙ VƯỢT NGỤC"
+          },
+          {
+            "description": "Movie Mode",
+            "fileUrl": "https://streamtape.com/e/PJkGeMpK4bF04A3/",
+            "id": 2,
+            "imageUrl": "https://img.tvzingvn.net/uploads/2016/05/374751-harry.potter_.and_.the_.sorcerers_.stone_82951358158228_.jpg",
+            "movieName": "Harry Potter Và Hòn Đá Phù Thủy"
+          },
+          {
+            "description": "Movie Mode",
+            "fileUrl": "https://streamtape.com/e/6Wgw11elk4s9XPy/",
+            "id": 3,
+            "imageUrl": "https://maxphim.net/anh-phim/800-400/bin/img.maxphim.net/images/info/harry-potter-and-the-chamber-of-secrets.jpg",
+            "movieName": "Harry Potter Và Phòng Chứa Bí Mật"
+          },
+          {
+            "description": "Movie Mode",
+            "fileUrl": "https://streamtape.com/e/jlYlDY63LLiQQx/",
+            "id": 4,
+            "imageUrl": "https://image.tmdb.org/t/p/w1280/5rrGVmRUuCKVbqUu41XIWTXJmNA.jpg",
+            "movieName": "Harry Potter Và Chiếc Cốc Lửa"
+          }
+        ]
+      },
+      {
+        "categoryId": 2,
+        "categoryTitle": "Phim Bộ",
+        "listMovies": [
+          {
+            "description": "Movie Mode",
+            "fileUrl": "phimbo_hacanhnoianh",
+            "id": 1,
+            "imageUrl": "https://baoquocte.vn/stores/news_dataimages/linhnguyen/022020/23/09/0719_28-1577288166387.jpg",
+            "movieName": "Hạ Cánh Nơi Anh"
+          },
+          {
+            "description": "Movie Mode",
+            "fileUrl": "phimbo_tayduky",
+            "id": 2,
+            "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+            "movieName": "Tây du ký 1986"
+          }
+        ]
+      },
+      {
+        "categoryId": 3,
+        "categoryTitle": "Phim Hoạt Hình",
+        "listMovies": [
+          {
+            "description": "Movie Mode",
+            "fileUrl": "https://streamtape.com/e/dVLZGvBD9LcQRl/",
+            "id": 3,
+            "imageUrl": "https://cdn.moveek.com/media/cache/large/54295d164dd3dcf465a160dc8fa07d6e19ead284.jpg",
+            "movieName": "Đảo Hải Tặc : GOLD"
+          },
+          {
+            "description": "Movie Mode",
+            "fileUrl": "https://streamtape.com/e/XJKzalbpKYUDv4x/",
+            "id": 4,
+            "imageUrl": "https://images.dailyhive.com/20200313214331/disney-frozen-2-f.jpg",
+            "movieName": "Nữ Hoàng Băng Giá 2"
+          }
+        ]
+      }
+    ],
+    "lists": {
+      "phimbo": [
+        {
+          "date": "19/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "phimbo_hacanhnoianh",
+          "hasAds": "0",
+          "id": 1,
+          "imageUrl": "https://baoquocte.vn/stores/news_dataimages/linhnguyen/022020/23/09/0719_28-1577288166387.jpg",
+          "movieName": "Hạ Cánh Nơi Anh",
+          "view": 31707
+        },
+        {
+          "date": "23/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "phimbo_tayduky",
+          "hasAds": "0",
+          "id": 2,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986",
+          "view": 31707
+        }
+      ],
+      "phimhoathinh": [
+        {
+          "date": "19/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/dVLZGvBD9LcQRl/",
+          "hasAds": "0",
+          "id": 1,
+          "imageUrl": "https://cdn.moveek.com/media/cache/large/54295d164dd3dcf465a160dc8fa07d6e19ead284.jpg",
+          "movieName": "Đảo Hải Tặc : GOLD",
+          "view": 31707
+        },
+        {
+          "date": "23/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/XJKzalbpKYUDv4x/",
+          "hasAds": "0",
+          "id": 2,
+          "imageUrl": "https://images.dailyhive.com/20200313214331/disney-frozen-2-f.jpg",
+          "movieName": "Nữ Hoàng Băng Giá 2",
+          "view": 21717
+        }
+      ],
+      "phimle": [
+        {
+          "date": "19/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/rb772eGB77tbjGG/",
+          "hasAds": "0",
+          "id": 1,
+          "imageUrl": "https://image.phimmoiz.com/film/1871/preview.medium.jpg",
+          "movieName": "HARRY POTTER VÀ TÊN TÙ VƯỢT NGỤC",
+          "view": 31707
+        },
+        {
+          "date": "23/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/PJkGeMpK4bF04A3/",
+          "hasAds": "0",
+          "id": 2,
+          "imageUrl": "https://img.tvzingvn.net/uploads/2016/05/374751-harry.potter_.and_.the_.sorcerers_.stone_82951358158228_.jpg",
+          "movieName": "Harry Potter Và Hòn Đá Phù Thủy",
+          "view": 31707
+        },
+        {
+          "date": "23/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/6Wgw11elk4s9XPy/",
+          "hasAds": "0",
+          "id": 3,
+          "imageUrl": "https://maxphim.net/anh-phim/800-400/bin/img.maxphim.net/images/info/harry-potter-and-the-chamber-of-secrets.jpg",
+          "movieName": "Harry Potter Và Phòng Chứa Bí Mật",
+          "view": 51707
+        },
+        {
+          "date": "23/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/jlYlDY63LLiQQx/",
+          "hasAds": "0",
+          "id": 4,
+          "imageUrl": "https://image.tmdb.org/t/p/w1280/5rrGVmRUuCKVbqUu41XIWTXJmNA.jpg",
+          "movieName": "Harry Potter Và Chiếc Cốc Lửa",
+          "view": 21707
+        },
+        {
+          "date": "23/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/gRq18rXQaqSGVw/",
+          "hasAds": "0",
+          "id": 5,
+          "imageUrl": "https://fandom.vn/wp-content/uploads/2019/06/harry-potter-and-the-order-of-the-phoenix-1.jpeg",
+          "movieName": "Harry Potter Và Hội Phượng Hoàng",
+          "view": 21707
+        },
+        {
+          "date": "23/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/LYxX0kZJ7PCZAB/",
+          "hasAds": "0",
+          "id": 6,
+          "imageUrl": "https://e.dowload.vn/data/image/2019/07/13/harry-potter-va-hoang-tu-lai-640.jpg",
+          "movieName": "Harry Potter Và Hoàng Tử Lai",
+          "view": 61707
+        },
+        {
+          "date": "23/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/JA9dlrrbpmij88v/",
+          "hasAds": "0",
+          "id": 7,
+          "imageUrl": "https://image.phimmoizz.net/film/1877/preview.medium.jpg",
+          "movieName": "Harry Potter Và Bảo Bối Tử Thần 1",
+          "view": 91707
+        },
+        {
+          "date": "23/11/2020",
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/O1WWePmZxBuZV9y/",
+          "hasAds": "0",
+          "id": 8,
+          "imageUrl": "https://c1.staticflickr.com/1/340/18559517980_87d85865c0_b.jpg",
+          "movieName": "Harry Potter Và Bảo Bối Tử Thần 2",
+          "view": 91707
+        }
+      ]
+    },
+    "newMovies": {
+      "homeBanner": [
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/rb772eGB77tbjGG/",
+          "id": "1",
+          "imageUrl": "https://image.phimmoiz.com/film/1871/preview.medium.jpg",
+          "movieName": "HARRY POTTER VÀ TÊN TÙ VƯỢT NGỤC"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/PJkGeMpK4bF04A3/",
+          "id": "2",
+          "imageUrl": "https://img.tvzingvn.net/uploads/2016/05/374751-harry.potter_.and_.the_.sorcerers_.stone_82951358158228_.jpg",
+          "movieName": "Harry Potter Và Hòn Đá Phù Thủy"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/dVLZGvBD9LcQRl/",
+          "id": 3,
+          "imageUrl": "https://cdn.moveek.com/media/cache/large/54295d164dd3dcf465a160dc8fa07d6e19ead284.jpg",
+          "movieName": "Đảo Hải Tặc : GOLD"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://streamtape.com/e/XJKzalbpKYUDv4x/",
+          "id": 4,
+          "imageUrl": "https://images.dailyhive.com/20200313214331/disney-frozen-2-f.jpg",
+          "movieName": "Nữ Hoàng Băng Giá 2"
+        }
+      ]
+    },
+    "phimbo": {
+      "phimbo_hacanhnoianh": [
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/1595303660052",
+          "id": 1,
+          "imageUrl": "https://baoquocte.vn/stores/news_dataimages/linhnguyen/022020/23/09/0719_28-1577288166387.jpg",
+          "movieName": "Hạ Cánh Nơi Anh"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/1595304839700",
+          "id": 2,
+          "imageUrl": "https://baoquocte.vn/stores/news_dataimages/linhnguyen/022020/23/09/0719_28-1577288166387.jpg",
+          "movieName": "Hạ Cánh Nơi Anh"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/1639265536752",
+          "id": 3,
+          "imageUrl": "https://baoquocte.vn/stores/news_dataimages/linhnguyen/022020/23/09/0719_28-1577288166387.jpg",
+          "movieName": "Hạ Cánh Nơi Anh"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/1639265209072",
+          "id": 4,
+          "imageUrl": "https://baoquocte.vn/stores/news_dataimages/linhnguyen/022020/23/09/0719_28-1577288166387.jpg",
+          "movieName": "Hạ Cánh Nơi Anh"
+        }
+      ],
+      "phimbo_tayduky": [
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2224214379133",
+          "id": 1,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2224214444669",
+          "id": 2,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2224214510205",
+          "id": 3,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2224850602621",
+          "id": 4,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2224850799229",
+          "id": 5,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906036861",
+          "id": 6,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906102397",
+          "id": 7,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906167933",
+          "id": 8,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906233469",
+          "id": 9,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906299005",
+          "id": 10,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906364541",
+          "id": 11,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906495613",
+          "id": 12,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906561149",
+          "id": 13,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906626685",
+          "id": 14,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906692221",
+          "id": 15,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906823293",
+          "id": 16,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266906888829",
+          "id": 17,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266907150973",
+          "id": 18,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266907282045",
+          "id": 19,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266907413117",
+          "id": 20,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266907871869",
+          "id": 21,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266908002941",
+          "id": 22,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266908068477",
+          "id": 23,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266908199549",
+          "id": 24,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        },
+        {
+          "description": "Movie Mode",
+          "fileUrl": "https://ok.ru/videoembed/2266908396157",
+          "id": 25,
+          "imageUrl": "https://vnn-imgs-f.vgcloud.vn/2019/08/30/20/chi-phi-quay-tay-du-ky-len-toi-hon-3-ty-moi-tap.jpg",
+          "movieName": "Tây du ký 1986"
+        }
+      ]
+    }
+  },
   "videos": {
     "categoryHome": [
       {
@@ -1977,50 +2424,6 @@
           "id": "6",
           "imageUrl": "http://old.camcam.cc/wp-content/uploads/2019/12/Curvaceous.mp4.jpg",
           "movieName": "Asian Cam – Curvaceous"
-        }
-      ]
-    }
-  },
-  "movie": {
-    "categoryHome": [
-      {
-        "categoryId": 1,
-        "categoryTitle": "Phim Lẻ",
-        "listMovies": [
-          {
-            "description": "Movie Mode",
-            "fileUrl": "https://cdn1.kenhvn2.com/play/js_fix/9x/play.php?link=Fullsv111id1711numview18677vn2fix1vn2fix2vn2fix3vn2fixload10590005123914723657622533498062863367263217785329/vn2fixurl4vn2fixurl5vn2mynameBOd9bFUaV8UWTk5tCT6lQNG1ansyISA3GSbOah3-IaM1tLN8ufAm7mIHMOT1K86nkuUPiEtVlFIfolderfixhttp://phimvn2.org/xem/tap-Full/54814/phim-HARRY-POTTER-VA-TEN-TU-VUOT-NGUC-thuyet-minh.aspx",
-            "id": 1,
-            "imageUrl": "https://image.phimmoiz.com/film/1871/preview.medium.jpg",
-            "movieName": "HARRY POTTER VÀ TÊN TÙ VƯỢT NGỤC"
-          }
-        ]
-      }
-    ],
-    "lists": {
-      "phimle": [
-        {
-          "date": "19/11/2020",
-          "description": "Movie Mode",
-          "fileUrl": "https://streamtape.com/e/rb772eGB77tbjGG/",
-          "hasAds": "0",
-          "id": 1,
-          "imageUrl": "https://image.phimmoiz.com/film/1871/preview.medium.jpg",
-          "movieName": "HARRY POTTER VÀ TÊN TÙ VƯỢT NGỤC",
-          "view": 31707
-        }
-      ],
-      "phimbo": [],
-      "phimhoathinh": []
-    },
-    "newMovies": {
-      "homeBanner": [
-        {
-          "description": "Movie Mode",
-          "fileUrl": "https://streamtape.com/e/rb772eGB77tbjGG/",
-          "id": "1",
-          "imageUrl": "https://image.phimmoiz.com/film/1871/preview.medium.jpg",
-          "movieName": "HARRY POTTER VÀ TÊN TÙ VƯỢT NGỤC"
         }
       ]
     }

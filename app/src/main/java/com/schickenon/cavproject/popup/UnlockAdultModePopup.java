@@ -21,7 +21,7 @@ import com.schickenon.cavproject.R;
 public class UnlockAdultModePopup {
 
     EditText editTextCode;
-    AppCompatButton btnUnlock;
+    AppCompatButton btnUnlock, btnClose;
 
     Context context;
 
@@ -46,24 +46,23 @@ public class UnlockAdultModePopup {
 
         editTextCode = popupView.findViewById(R.id.edtCode);
         btnUnlock = popupView.findViewById(R.id.btnUnlock);
+        btnClose = popupView.findViewById(R.id.btn_Close);
 
-        popupView.setOnTouchListener(new View.OnTouchListener() {
+        btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
+            public void onClick(View view) {
                 popupWindow.dismiss();
-                return true;
             }
         });
 
         btnUnlock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String code = editTextCode.getText().toString();
+                String code = editTextCode.getText().toString().toUpperCase();
                 if(code.equals("XXX2020")) {
                     context.startActivity(new Intent(context, MainActivity.class));
                 }
             }
         });
     }
-
 }
