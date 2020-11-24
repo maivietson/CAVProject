@@ -2,7 +2,7 @@ package com.schickenon.cavproject.model;
 
 public class CategoryItem {
 
-    private Integer id;
+    private String id;
     private String movieName;
     private String imageUrl;
     private String fileUrl;
@@ -11,7 +11,7 @@ public class CategoryItem {
     public CategoryItem() {
     }
 
-    public CategoryItem(Integer id, String movieName, String imageUrl, String fileUrl, String description) {
+    public CategoryItem(String id, String movieName, String imageUrl, String fileUrl, String description) {
         this.id = id;
         this.movieName = movieName;
         this.imageUrl = imageUrl;
@@ -27,11 +27,11 @@ public class CategoryItem {
         this.description = description;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

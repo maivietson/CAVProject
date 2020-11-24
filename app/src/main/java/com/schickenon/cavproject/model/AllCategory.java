@@ -13,29 +13,29 @@ import androidx.annotation.NonNull;
 @IgnoreExtraProperties
 public class AllCategory {
 
-    private Integer categoryId;
+    private String categoryId;
     private String categoryTitle;
     private List<CategoryItem> categoryItemList = null;
 
     public AllCategory() {
     }
 
-    public AllCategory(Integer categoryId, String categoryTitle) {
+    public AllCategory(String categoryId, String categoryTitle) {
         this.categoryId = categoryId;
         this.categoryTitle = categoryTitle;
     }
 
-    public AllCategory(Integer categoryId, String categoryTitle, List<CategoryItem> categoryItemList) {
+    public AllCategory(String categoryId, String categoryTitle, List<CategoryItem> categoryItemList) {
         this.categoryId = categoryId;
         this.categoryTitle = categoryTitle;
         this.categoryItemList = categoryItemList;
     }
 
-    public Integer getCategoryId() {
+    public String getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(Integer categoryId) {
+    public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
     }
 
