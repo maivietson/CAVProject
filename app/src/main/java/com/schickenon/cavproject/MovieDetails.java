@@ -92,8 +92,6 @@ public class MovieDetails extends AppCompatActivity {
 
         getDataFromPreviousActivity();
 
-        setChapterForMovie();
-
         // set data to layout
         Glide.with(MovieDetails.this).load(mImage).into(movieImage);
         movieName.setText(mName);
@@ -127,6 +125,8 @@ public class MovieDetails extends AppCompatActivity {
         mFileUrl = getIntent().getStringExtra("fileUrl");
         mDescription = getIntent().getStringExtra("description");
         hasAds = getIntent().getStringExtra("hasAds");
+
+        setChapterForMovie();
     }
 
     private void getViewOfActivity() {

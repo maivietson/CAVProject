@@ -26,7 +26,7 @@
                     android:id="@+id/btn_Close"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/ic_baseline_close_24" />
+                    android:background="@android:drawable/ic_delete" />
 
                 <TextView
                     android:id="@+id/titlePopup"
