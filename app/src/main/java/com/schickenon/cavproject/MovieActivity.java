@@ -238,4 +238,9 @@ public class MovieActivity extends AppCompatActivity {
         nestedScrollView.scrollTo(0,0);
         appBarLayout.setExpanded(true);
     }
+
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }
