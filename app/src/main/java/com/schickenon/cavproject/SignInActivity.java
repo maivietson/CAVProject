@@ -71,6 +71,7 @@ public class SignInActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()) {
                                     Intent intent = new Intent(SignInActivity.this, MovieActivity.class);
+                                    intent.putExtra("ShowSurvey", true);
                                     startActivity(intent);
                                 } else {
                                     progressDialog.setMessage("Account not exist!!");

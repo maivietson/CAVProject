@@ -7,9 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.GridView;
 
 import com.google.android.material.appbar.AppBarLayout;
@@ -27,6 +29,7 @@ import com.schickenon.cavproject.model.AllCategory;
 import com.schickenon.cavproject.model.BannerMovies;
 import com.schickenon.cavproject.model.CategoryItem;
 import com.schickenon.cavproject.model.VideoItem;
+import com.schickenon.cavproject.popup.CustomDialog;
 import com.schickenon.cavproject.popup.PopupCustom;
 import com.schickenon.cavproject.popup.UnlockAdultModePopup;
 
@@ -59,6 +62,8 @@ public class MovieActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReferenceNewMovies;
 
+    private boolean showSurvey;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +77,17 @@ public class MovieActivity extends AppCompatActivity {
 
         // init database reference
         firebaseDatabase = FirebaseDatabase.getInstance();
+
+        showSurvey = getIntent().getBooleanExtra("ShowSurvey", false);
+
+        CustomDialog dialog = new CustomDialog(this);
+
+        if(showSurvey) {
+            dialog.show();
+            dialog.setCancelable(false);
+            Window window = dialog.getWindow();
+            window.setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
+        }
 
         getDataBannerMovies("movie/newMovies/homeBanner");
         getCategoryHome("movie/categoryHome");
@@ -113,6 +129,11 @@ public class MovieActivity extends AppCompatActivity {
         fabNotify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                dialog.show();
+                dialog.setCancelable(false);
+                Window window = dialog.getWindow();
+                window.setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
+
                 UnlockAdultModePopup popupCustom = new UnlockAdultModePopup(MovieActivity.this);
                 popupCustom.showPopupWindow(view);
             }
