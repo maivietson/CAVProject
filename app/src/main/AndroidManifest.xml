@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.schickenon.cavproject">
+    package="com.galaxygame.cavenjoy">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,21 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CAVProject"
         android:usesCleartextTraffic="true">
-        <activity android:name=".WebViewActivity"></activity>
-        <activity android:name=".MovieActivity" />
+        <activity android:name="com.galaxygame.cavenjoy.WebViewActivity"></activity>
+        <activity android:name="com.galaxygame.cavenjoy.MovieActivity" />
         <activity
-            android:name=".VideoPlayerActivity"
+            android:name="com.galaxygame.cavenjoy.VideoPlayerActivity"
             android:configChanges="orientation|screenSize|layoutDirection" />
         <activity
-            android:name=".MovieDetails"
+            android:name="com.galaxygame.cavenjoy.MovieDetails"
             android:screenOrientation="portrait" />
-        <activity android:name=".SignUpActivity" />
+        <activity android:name="com.galaxygame.cavenjoy.SignUpActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.galaxygame.cavenjoy.MainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".SignInActivity" />
+        <activity android:name="com.galaxygame.cavenjoy.SignInActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.galaxygame.cavenjoy.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

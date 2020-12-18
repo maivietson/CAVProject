@@ -1,23 +1,24 @@
 {
   "project_info": {
     "project_number": "812470408133",
+    "firebase_url": "https://cavproject-cac17-default-rtdb.firebaseio.com",
     "project_id": "cavproject-cac17",
     "storage_bucket": "cavproject-cac17.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:812470408133:android:16637577ff29c9221a71ac",
+        "mobilesdk_app_id": "1:812470408133:android:1492d93a67cb8f401a71ac",
         "android_client_info": {
-          "package_name": "com.schickenon.cavproject"
+          "package_name": "com.galaxygame.cavenjoy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "812470408133-d7rcubt0p790nlfmjrui22rn8ipb77v9.apps.googleusercontent.com",
+          "client_id": "812470408133-is949dt0s7k2rdeg2flshddd0vm40ah7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.schickenon.cavproject",
+            "package_name": "com.galaxygame.cavenjoy",
             "certificate_hash": "436aff73a7e75ae4741e0c54b9e5ef1e48078e68"
           }
         },

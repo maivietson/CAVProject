@@ -1,0 +1,41 @@
+{
+  "movie" : {
+    "categoryHome" : [ {
+      "categoryId" : "1",
+      "categoryTitle" : "Phim Lẻ"
+    }, {
+      "categoryId" : "2",
+      "categoryTitle" : "Phim Bộ"
+    }, {
+      "categoryId" : "3",
+      "categoryTitle" : "Phim Hoạt Hình"
+    } ]
+  },
+  "videos" : {
+    "categoryHome" : [ {
+      "categoryId" : "1",
+      "categoryTitle" : "China Cam"
+    }, {
+      "categoryId" : "2",
+      "categoryTitle" : "China Porn"
+    }, {
+      "categoryId" : "3",
+      "categoryTitle" : "China Amateur"
+    }, {
+      "categoryId" : "4",
+      "categoryTitle" : "China Model"
+    }, {
+      "categoryId" : "5",
+      "categoryTitle" : "China"
+    }, {
+      "categoryId" : "6",
+      "categoryTitle" : "Asian"
+    }, {
+      "categoryId" : "7",
+      "categoryTitle" : "Euro Porn"
+    }, {
+      "categoryId" : "8",
+      "categoryTitle" : "JAV"
+    } ]
+  }
+}
